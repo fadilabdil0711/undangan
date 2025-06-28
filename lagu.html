@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio Control</title>
+</head>
+<body>
+    <h1>Welcome to My Audio Page</h1>
+    
+    <!-- Audio Element -->
+    <audio id="audioPlayer" src="img/lagu_jamburi.mp3" loop>
+        Your browser does not support the audio element.
+    </audio>
+    
+    <!-- Play and Pause Buttons -->
+    <button onclick="playAudio()">Play</button>
+    <button onclick="pauseAudio()">Pause</button>
+
+    <script>
+        // Mendapatkan referensi ke elemen audio
+        var audio = document.getElementById("audioPlayer");
+
+        // Fungsi untuk memulai pemutaran audio
+        function playAudio() {
+            audio.play();
+        }
+
+        // Fungsi untuk menghentikan pemutaran audio
+        function pauseAudio() {
+            audio.pause();
+        }
+    </script>
+</body>
+</html>
