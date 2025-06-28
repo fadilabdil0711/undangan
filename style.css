@@ -1,78 +1,91 @@
 :root {
-    --navy: #31496a;
-    --bg: #c8e1ee;
-    --shadow: 0 2px 2px rgb(0 0 0 / 0.5)
+  --navy: #31496a;
+  --bg: #c8e1ee;
+  --shadow: 0 2px 2px rgb(0 0 0 / 0.5);
 }
 
 body {
-    font-size: 1.2rem;
-    font-family: "Work Sans", sans-serif;
-    min-height: 2000px;
+  font-size: 1.1rem;
+  font-family: "Work Sans", sans-serif;
+  min-height: 2000px;
 }
 
 /* Hero */
 .hero::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url(img/bg-blue.jpg);
-    background-size: cover;
-    background-position: center;
-    z-index: -1;
-    filter: opacity(50%);
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(img/bg-blue.jpg);
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+  filter: opacity(50%);
 }
 
 .foreground-image {
-  width: 200px; /* Sesuaikan ukuran gambar */
-  height: auto; /* Menjaga proporsi gambar */
-  border-radius: 80%; /* Membuat gambar berbentuk lingkaran */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Efek bayangan */
-  margin: 20px 0; /* Jarak vertikal atas dan bawah */
-  border: 5px solid #fff; /* Bingkai putih di sekitar gambar */
-  object-fit: cover; /* Memastikan gambar tidak terdistorsi */
+  width: 200px;
+  max-width: 80%;
+  height: auto;
+  border-radius: 80%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin: 20px 0;
+  border: 5px solid #fff;
+  object-fit: cover;
 }
+
 .hero {
-    position: relative;
-    min-height: 100vh;
+  position: relative;
+  min-height: 100vh;
+  text-align: center;
+  padding: 2rem;
+}
+
+.hero h1 {
+  font-family: "Sacramento", cursive;
+  font-size: 4rem;
+  color: var(--navy);
 }
 
 .hero h2 {
-    color: var(--navy);
-}
-.hero h1 {
-    font-family: "Sacramento", cursive;
-    font-size: 6rem;
-    color: var(--navy);
+  color: var(--navy);
+  font-size: 2rem;
 }
 
 .hero h3 {
-    color: var(--navy);
+  color: var(--navy);
+  font-size: 1.5rem;
 }
 
 .hero p {
-    font-size: 1rem;
-    color: var(--navy);
+  font-size: 1rem;
+  color: var(--navy);
 }
 
 .hero a {
-    color: var(--bg);
-    background-color: var(--navy);
-    box-shadow: var(--shadow);
+  color: var(--bg);
+  background-color: var(--navy);
+  box-shadow: var(--shadow);
 }
 
 .hero a:hover {
-    background-color: var(--bg);
-    color: var(--navy);
-    border-color: var(--navy);
+  background-color: var(--bg);
+  color: var(--navy);
+  border-color: var(--navy);
+}
+
+/* Countdown Styling */
+.simply-countdown > .simply-section {
+  padding: 40px;
+  margin: 5px;
 }
 
 /* Home */
 .home {
   background-image: url(img/bg-pattern.jpg);
-  background-position: var(--bg);
+  background-position: center;
   background-size: cover;
   min-height: 100vh;
   padding-top: 5rem;
@@ -81,36 +94,32 @@ body {
 
 .home h2,
 .info h2,
-.rsvp h2, 
+.rsvp h2,
 .tema h2 {
   color: var(--navy);
-  font-family: 'Sacramento';
-  font-size: 5rem;
+  font-family: "Sacramento";
+  font-size: 4rem;
   font-weight: bold;
-}
-
-.home h2 {
-  color: var(--bg);
 }
 
 .home h3 {
   color: var(--navy);
-  font-size: 2.5rem;
+  font-size: 2rem;
   margin-bottom: 1rem;
 }
 
 .home p {
-  font-size: 1.1rem;
+  font-size: 1rem;
   color: var(--navy);
 }
 
 .home .couple {
-  margin-top: 100px;
+  margin-top: 80px;
 }
 
 .home .couple h3 {
-  font-family: 'Sacramento';
-  font-size: 3.2rem;
+  font-family: "Sacramento";
+  font-size: 2.8rem;
   color: var(--navy);
 }
 
@@ -131,7 +140,7 @@ body {
   color: var(--bg);
 }
 
-/* Info */
+/* Info & Tema */
 .info,
 .tema {
   background-color: var(--bg);
@@ -139,45 +148,6 @@ body {
   padding-top: 5rem;
   padding-bottom: 8rem;
 }
-
-.info {
-  background-image: url();
-  background-size: cover;
-  background-position: center;
-}
-.info .alamat {
-  font-size: 1.1rem;
-}
-
-.info .description {
-  font-size: 1rem;
-  font-weight: 300;
-}
-
-.info .card {
-  background-color: var(--navy);
-  color: var(--bg);
-  border: 1px solid var(--navy);
-}
-
-.info .card-header {
-  border-bottom: 1px solid var(--navy);
-  background-color: var(--bg);
-  text-transform: uppercase;
-  letter-spacing: 0.1rem;
-}
-
-.info .card-body {
-  font-size: 1rem;
-}
-
-.info .card-footer {
-  border-top: 1px solid var(--navy);
-  font-size: 0.9rem;
-  font-weight: 300;
-}
-
-/* Tema Acara */
 
 .tema {
   background-color: var(--navy);
@@ -190,21 +160,19 @@ body {
 
 /* rsvp */
 .rsvp {
-  padding-top: 10rem;
-  padding-bottom: 8rem;
+  padding-top: 8rem;
+  padding-bottom: 6rem;
   font-size: 1rem;
   font-weight: 300;
   background-color: var(--bg);
 }
 
 .rsvp h2 {
-  font-size: 4.5rem;
+  font-size: 3.5rem;
 }
 
 .rsvp p {
   color: var(--navy);
-  font-size: 1rem;
-  font-weight: 300;
 }
 
 .rsvp form label {
@@ -240,8 +208,9 @@ footer a:hover {
   color: var(--bg);
 }
 
+/* Alerts */
 .alert {
-  font-size: 16px;
+  font-size: 1rem;
   padding: 15px;
   margin-top: 15px;
   border-radius: 5px;
@@ -257,14 +226,7 @@ footer a:hover {
   color: white;
 }
 
-#alert-box {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  z-index: 9999;
-  display: none;
-}
-
+#alert-box,
 #alert-error {
   position: absolute;
   top: 20px;
@@ -273,47 +235,79 @@ footer a:hover {
   display: none;
 }
 
-/* Responsive */
+/* Responsiveness */
 
-/* Extra Large */
+/* Large */
 @media (max-width: 1200px) {
+  html {
+    font-size: 90%;
+  }
   .home .heart {
     transform: translateX(-50%) translateY(45px);
   }
 }
 
-/* Laptop */
+/* Medium (Laptop) */
 @media (max-width: 992px) {
-    html {
-        font-size: 75%;
-    }
-    .simply-countdown>.simply-section {
-        padding: 70px;
-    }
-
-    .home .heart {
-      display: none;
-    }
+  html {
+    font-size: 80%;
+  }
+  .hero h1 {
+    font-size: 4rem;
+  }
+  .hero h2 {
+    font-size: 1.8rem;
+  }
+  .hero h3 {
+    font-size: 1.3rem;
+  }
+  .home .heart {
+    display: none;
+  }
+  .simply-countdown > .simply-section {
+    padding: 30px;
+  }
 }
 
 /* Tablet */
 @media (max-width: 768px) {
-    html {
-        font-size: 65%;
-    }
-    .simply-countdown>.simply-section {
-        padding: 60px;
-        margin: 5px;
-    }    
+  html {
+    font-size: 70%;
+  }
+  .hero h1 {
+    font-size: 3.5rem;
+  }
+  .hero h2 {
+    font-size: 1.6rem;
+  }
+  .hero h3 {
+    font-size: 1.2rem;
+  }
+  .simply-countdown > .simply-section {
+    padding: 25px;
+    margin: 4px;
+  }
 }
 
-/* Mobile phone */
+/* Mobile */
 @media (max-width: 576px) {
-    html {
-        font-size: 60%;
-    }    
-    .simply-countdown>.simply-section {
-        padding: 45px;
-        margin: 3px;
-    }
+  html {
+    font-size: 60%;
+  }
+  .hero h1 {
+    font-size: 3rem;
+  }
+  .hero h2 {
+    font-size: 1.4rem;
+  }
+  .hero h3 {
+    font-size: 1.1rem;
+  }
+  .simply-countdown > .simply-section {
+    padding: 20px;
+    margin: 3px;
+  }
+  .foreground-image {
+    width: 150px;
+  }
 }
